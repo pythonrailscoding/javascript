@@ -75,3 +75,20 @@ function multiply() {
         document.getElementById('num2').value = '';
     }
 }
+function table() {
+    var exist = document.getElementById("output").innerHTML;
+    result = '';
+    var a = document.getElementById("num1").value;
+    if (!a){
+        document.getElementById("output").innerHTML = '<br/><b><font color="red">No Number Entered!</font></b><br/>' + exist;
+    } else {
+        var i = 1;
+        for (i = 1 ; i < 11 ; i++) {
+            var c = parseFloat(a) * parseInt(i);
+            result += a + " x " + i + " = " + c + '</br>';
+        }
+        document.getElementById("output").innerHTML = '<br/><b>Multiplication Table of ' + a +' is:</b><br/><b>' + result + '</b>' + exist;
+        document.getElementById("num1").value = '';
+    }
+    
+}
