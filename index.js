@@ -92,3 +92,40 @@ function table() {
     }
     
 }
+function divide() {
+	var num1 = parseFloat(document.getElementById("num1").value);
+	var num2 = parseFloat(document.getElementById("num2").value);
+	var exist = document.getElementById("output").innerHTML;
+	if (!num1 && !num2){
+		document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+	} else if (num2 == 0) {
+		document.getElementById("output").innerHTML = '<br/><br/><b><font color="red">Cannot divide a number by 0</font></b>' + exist;
+	} else if (!num1 || !num2) {
+		document.getElementById("output").innerHTML = '<br/><br/><b><font color="red">You need to enter both the fields</font></b>' + exist;
+		document.getElementById("num1").value = '';
+		document.getElementById("num2").value = '';
+	} else {
+		var quotient = num1 / num2;
+		var remainder = num1 % num2;
+		document.getElementById("output").innerHTML = '<br/><br/><b>' + num1 + ' / ' + num2 + ' gives:<br/>Quotient: ' + quotient + '<br/>Remainder: ' + remainder + '</b>' + exist;
+		document.getElementById("num1").value = '';
+		document.getElementById("num2").value = '';
+	}
+} function subtract() {
+    var exist = document.getElementById('output').innerHTML;
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+    if (!num1 && !num2) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>Both the fields are entered blank!</font></b>" + exist;
+    } else if (!num1 || !num2) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill both of the fields!</font></b>"  + exist;
+        document.getElementById("num1").value = '';
+        document.getElementById("num2").value = '';
+    } else {
+        var difference = num1 - num2;
+        document.getElementById("output").innerHTML = "<br><br/><b>Difference of " + num1 + " and " + num2 + " is " + difference + '</b>' + exist;
+        document.getElementById('num1').value = '';
+        document.getElementById('num2').value = '';
+    }
+    
+}   
