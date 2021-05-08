@@ -16,45 +16,80 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="temperature.html">TemperatureCalc</a>
+                <a class="nav-link" aria-current="page" href="../temperature.html">TemperatureCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">NorMalCalc</a>
+                <a class="nav-link" href="../index.html">NorMalCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="table.html">MultipliTableCalc</a>
+                <a class="nav-link" href="../table.html">MultipliTableCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="TwoDCalc.html">FiguresMathCalc</a>
+                <a class="nav-link active" href="../TwoDCalc.html">FiguresMathCalc</a>
               </li>
           </div>
         </div>
       </nav>
     
-    <title>MultipliTableCalc!</title>
+    <title>NorMalCalc!</title>
   </head>
   <body>
       <br/>
       <br/>
+      
+          
+  
+      
       <div class="container">
-          <div class="card">
-              <h3 class="card-header">Input Entries</h3>
-              <div class="container">
-                  <br>
-    <input type="number", id="num1", placeholder="Enter a number" class="form-control" name="number"><br/>
-        
-        <div class="d-grid gap-2">
-        <button onclick="table()" class="btn btn-secondary btn-sm">Get Multiplication Table</button>
-        
+          
+    
+              
+               
+    <div class="row row-cols-2 row-cols-md-2">
+        <div class="col">
+            <br/><br/><br/>
+          <div class="card " style="width: 28rem;">
+            
+            <div class="card-body">
+              
+              <ul class="list-group">
+                <a href="../TwoDCalc.html" class="list-group-item list-group-item-action">Rectangle</a>
+                <a href="twoDfig/square.html" class="list-group-item list-group-item-action list-group-item-primary">Square</a>
+                <a href="circle.html" class="list-group-item list-group-item-action">Circle</a>
+                
+                
+              </ul>
+            </div>
+            
+          </div>
         </div>
         
-        <script type="text/javascript" src="index.js">
+        <div class="col">
+          <div class="card h-100">
+            
+            
+              <h5 class="card-header">Square</h5>
+              <div class="card-body">
+              <input type="number" class="form-control" id="side" placeholder="Enter the side of the square">
+              <br/>
+              <div class="d-grid gap-2">
+              <button class="btn btn-secondary btn-sm" onclick="calc_sq()">Calculate Dimensions</button>
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">This will calculate Area and Perimeter and length of a Diagnol</small>
+            </div>
+          </div>
+        </div>
+      </div>
+        <script type="text/javascript" src="../index.js">
         
         </script>
         <br>
         </div>
         </div>
         <br><br>
+        <div class="container">
         <div class="card text-dark bg-light mb-3">
             <h3 class="card-header"><button class="btn btn-secondary btn-sm" onclick="Clear()">Clear Terminal</button><br/></h3>
             <div class="container">

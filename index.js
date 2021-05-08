@@ -100,8 +100,12 @@ function divide() {
 		document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
 	} else if (num2 == 0) {
 		document.getElementById("output").innerHTML = '<br/><br/><b><font color="red">Cannot divide a number by 0</font></b>' + exist;
-	} else if (!num1 || !num2) {
-		document.getElementById("output").innerHTML = '<br/><br/><b><font color="red">You need to enter both the fields</font></b>' + exist;
+	} else if (num1 == 0) {
+        document.getElementById("output").innerHTML = '<br/><br/><b>' + num1 + ' / ' + num2 + ' gives:<br/>Quotient: 0'  + '<br/>Remainder: 0 </b>' + exist;
+        document.getElementById("num1").value = '';
+		document.getElementById("num2").value = '';
+    }else if (!num1 || !num2) {
+		document.getElementById("output").innerHTML = '<br/><br/><b><font color="red">You need to enter values in both the fields</font></b>' + exist;
 		document.getElementById("num1").value = '';
 		document.getElementById("num2").value = '';
 	} else {
@@ -117,7 +121,7 @@ function divide() {
     var num2 = parseFloat(document.getElementById("num2").value);
     if (!num1 && !num2) {
         document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>Both the fields are entered blank!</font></b>" + exist;
-    } else if (!num1 || !num2) {
+    }else if (!num1 || !num2) {
         document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill both of the fields!</font></b>"  + exist;
         document.getElementById("num1").value = '';
         document.getElementById("num2").value = '';
@@ -126,6 +130,66 @@ function divide() {
         document.getElementById("output").innerHTML = "<br><br/><b>Difference of " + num1 + " and " + num2 + " is " + difference + '</b>' + exist;
         document.getElementById('num1').value = '';
         document.getElementById('num2').value = '';
-    }
+    } 
     
+}  function calc_rect() {
+    var l = parseFloat(document.getElementById("length").value);
+    var b = parseFloat(document.getElementById("breadth").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!l && !b) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>Both the fields are entered blank!</font></b>" + exist;
+    } else if (!l || !b) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill both of the fields!</font></b>"  + exist;
+        document.getElementById("length").value = '';
+        document.getElementById("breadth").value = '';
+    } else if ((l < b) || (l==b)) {
+        document.getElementById("output").innerHTML = "<br/><br/><b><font color='red'>Length is always greater than breadth!<br/>You entered Length " + l + " and breadth " + b+ "</font></b>" + exist;
+        document.getElementById("length").value = '';
+        document.getElementById("breadth").value = '';
+    } else {
+        var diagnol = Math.sqrt((l*l) + (b*b));
+        document.getElementById("output").innerHTML = "<br/><br/><b>For rectangle of length " + l + " and breadth " + b + "<br/>Area: " + l*b + " square units<br/>Perimeter: " + 4*(l+b) + " units<br/>Length of a diagnol: " + diagnol +" units</b>" + exist;
+        document.getElementById("length").value = '';
+        document.getElementById("breadth").value = '';
+    }
+}
+function calc_sq() {
+    var side = parseFloat(document.getElementById("side").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!side) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+    } else {
+        var sq_perm = 4*side;
+        var sq_area = side*side;
+        var diagnol = Math.sqrt((side*side)+(side*side));
+        document.getElementById("output").innerHTML = "<b><br/><br/>For a square of side " + side + " units:<br/>Perimeter is: " + sq_perm + " units<br/>Area is: " + sq_area + " square units<br/>Length of a diagnol is: " + diagnol + " units</b>" + exist;
+        document.getElementById("side").value = "";
+    }
+}
+function calc_cir() {
+    var dividepi = document.getElementById("defpii").checked;
+    var normalpii = document.getElementById("secpii").checked;
+    var exist = document.getElementById("output").innerHTML;
+    var r = parseFloat(document.getElementById("radius").value);
+    var diam = 2*r;
+    if (!r) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">Value of radius not entered!</font></b>' + exist;
+        document.getElementById("defpii").checked = false;
+        document.getElementById("secpii").checked = false;
+    } else if (dividepi == true){
+        var twentyarea = (22*r*r)/7;
+        var twentycircum = (2*22*r)/7;
+        document.getElementById("output").innerHTML = "<br/><br/><b>When Radius of circle is " + r + " units and the value of pii is 22/7:<br/>Diameter: " + diam + " units<br/>Area of the circle: " + twentyarea + " sq. units<br/>Circumference of the circle is: " + twentycircum + " units</b>" + exist;  
+        document.getElementById("radius").value = '';
+        document.getElementById("defpii").checked = false;
+    } else if (normalpii == true){
+        var twentyarea = (3.14*r*r);
+        var twentycircum = (3.14*2*r);
+        document.getElementById("output").innerHTML = "<br/><br/><b>When Radius of circle is " + r + " units and the value of pii is 22/7:<br/>Diameter: " + diam + " units<br/>Area of the circle: " + twentyarea + " sq. units<br/>Circumference of the circle is: " + twentycircum + " units</b>" + exist;  
+        document.getElementById("radius").value = '';
+        document.getElementById("secpii").checked = false;
+    } else {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">Value of pii not choosen!</font></b>' + exist;
+        document.getElementById("radius").value = '';
+    }
 }   
