@@ -16,16 +16,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="temperature.html">TemperatureCalc</a>
+                <a class="nav-link" aria-current="page" href="../temperature.html">TemperatureCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">NorMalCalc</a>
+                <a class="nav-link" href="../index.html">NorMalCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="table.html">MultipliTableCalc</a>
+                <a class="nav-link" href="../table.html">MultipliTableCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="TwoDCalc.html">FiguresMathCalc</a>
+                <a class="nav-link active" href="../TwoDCalc.html">FiguresMathCalc</a>
               </li>
           </div>
         </div>
@@ -34,15 +34,15 @@
     <title>FiguresMathCalc!</title>
   </head>
   <br/><br/><div class="container">
-    <ul class="nav nav-tabs justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#" color="black">ThreeDFiguresCalc</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#" color="black">ThreeDFiguresCalc</a>
-        </li>
-    </ul>
-    </div>
+  </ul>
+  </div>
   <body>
       <br/>
       <br/>
@@ -63,10 +63,10 @@
             <div class="card-body">
               
               <ul class="list-group">
-                <a href="TwoDCalc.html" class="list-group-item list-group-item-action list-group-item-primary">Rectangle</a>
-                <a href="twoDfig/square.html" class="list-group-item list-group-item-action">Square</a>
-                <a href="twoDfig/circle.html" class="list-group-item list-group-item-action">Circle</a>
-                <a href="twoDfig/rhombus.html" class="list-group-item list-group-item-action">Rhombus</a>
+                <a href="../TwoDCalc.html" class="list-group-item list-group-item-action">Rectangle</a>
+                <a href="square.html" class="list-group-item list-group-item-action">Square</a>
+                <a href="circle.html" class="list-group-item list-group-item-action">Circle</a>
+                <a href="rhombus.html" class="list-group-item list-group-item-action list-group-item-primary">Rhombus</a>
                 
               </ul>
             </div>
@@ -78,22 +78,22 @@
           <div class="card h-100">
             
             
-              <h5 class="card-header">Rectangle</h5>
+              <h5 class="card-header">Rhombus</h5>
               <div class="card-body">
-              <input type="number" class="form-control" id="length" placeholder="Enter the LENGTH of the rectangle">
-              <br/><input type="number" class="form-control" id="breadth" placeholder="Enter the BREADTH of the rectangle">
+              <input type="number" class="form-control" id="d1" placeholder="Enter the diagnol of the rhombus"><br/>
+              <input type="number" class="form-control" id="d2" placeholder="Enter another diagnol of the rhombus">
               <br/>
               <div class="d-grid gap-2">
-              <button class="btn btn-secondary btn-sm" onclick="calc_rect()">Calculate Dimensions</button>
+              <button class="btn btn-secondary btn-sm" onclick="calc_rm()">Calculate Dimensions</button>
               </div>
             </div>
             <div class="card-footer">
-              <small class="text-muted">This will calculate Area and length of a Diagnol</small>
+              <small class="text-muted">This will calculate Area and Perimeter and length of the side of the rhombus</small>
             </div>
           </div>
         </div>
       </div>
-        <script type="text/javascript" src="index.js">
+        <script type="text/javascript" src="../index.js">
         
         </script>
         <br>

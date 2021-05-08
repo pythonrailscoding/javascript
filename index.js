@@ -193,3 +193,25 @@ function calc_cir() {
         document.getElementById("radius").value = '';
     }
 }   
+
+function calc_rm() {
+    var d1 = parseFloat(document.getElementById("d1").value);
+    var d2 = parseFloat(document.getElementById("d2").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!d1 && !d2) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+    } else if (!d1 || !d2) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill both of the fields!</font></b>"  + exist;
+        document.getElementById("d1").value = '';
+        document.getElementById("d2").value = '';
+    }  else {
+        var rm_area = (1*d1*d2)/2;
+        var half_d1 = d1/2;
+        var half_d2 = d2/2;
+        var rm_side = Math.sqrt((half_d1*half_d1) + (half_d2*half_d2));
+        var rm_perm = 4*rm_side;
+        document.getElementById("output").innerHTML = "<br/><br/><b>For a rhombus with two diagnols of " + d1  + " and " + d2 + " units:<br/>Length of a side: " + rm_side + " units<br/>Area of the rhombus: " + rm_area + " sq. units<br/>Perimeter of the rhombus: " + rm_perm + " units</b>" + exist;
+        document.getElementById("d1").value = "";
+        document.getElementById("d2").value = "";
+    }
+}
