@@ -64,10 +64,11 @@
               
               <ul class="list-group">
                 <a href="../TwoDCalc.html" class="list-group-item list-group-item-action">Rectangle</a>
-                <a href="square.html" class="list-group-item list-group-item-action">Square</a>
+                <a href="twoDfig/square.html" class="list-group-item list-group-item-action">Square</a>
                 <a href="circle.html" class="list-group-item list-group-item-action">Circle</a>
-                <a href="rhombus.html" class="list-group-item list-group-item-action list-group-item-primary">Rhombus</a>
-                <a href="triangle.html" class="list-group-item list-group-item-action ">Triangle</a>
+                <a href="rhombus.html" class="list-group-item list-group-item-action">Rhombus</a>
+                <a href="triangle.html" class="list-group-item list-group-item-action list-group-item-primary">Triangle</a>
+                
               </ul>
             </div>
             
@@ -78,19 +79,25 @@
           <div class="card h-100">
             
             
-              <h5 class="card-header">Rhombus</h5>
-              <div class="card-body">
-              <input type="number" class="form-control" id="d1" placeholder="Enter the diagnol of the rhombus"><br/>
-              <input type="number" class="form-control" id="d2" placeholder="Enter another diagnol of the rhombus">
-              <br/>
-              <div class="d-grid gap-2">
-              <button class="btn btn-secondary btn-sm" onclick="calc_rm()">Calculate Dimensions</button>
+            <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="true" href="triangle.html">Using Height </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link bg-primary active" href="triangle_heron.html">Using Heron's Formula</a>
+                  </li>
+                  
+                </ul>
               </div>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">This will calculate Area and Perimeter and length of the side of the rhombus</small>
-            </div>
-          </div>
+              <div class="card-body">
+                <input type="number" id="s1" class="form-control" placeholder="Enter the FIRST SIDE of the Triangle">
+                <br/><input type="number" id="s2" class="form-control" placeholder="Enter the SECOND SIDE of the Triangle">
+                <br/><input type="number" id="s3" class="form-control" placeholder="Enter the THIRD SIDE of the Triangle">
+                <div class="d-grid gap-2"><br/>
+                <button onclick="calc_heron()" class="btn btn-secondary btn-sm">Calculate</button>
+                </div>
+              </div>
         </div>
       </div>
         <script type="text/javascript" src="../index.js">

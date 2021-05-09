@@ -289,3 +289,40 @@ function calc_cylinder() {
         document.getElementById("secpii").checked = false;
     }
 }
+
+function calc_tr() {
+    var b = parseFloat(document.getElementById("b").value);
+    var h = parseFloat(document.getElementById("h").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!h && !b) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;        
+    } else if(!h || !b) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("b").value = '';
+        document.getElementById("h").value = '';
+    } else {
+        var area = (1*b*h)/2;
+        document.getElementById("output").innerHTML = "<br/><br/><b>For a Triangle with side and height of " + b + " and " + h + " units<br/>Area: " + area + " sq. units" + exist;
+        document.getElementById("b").value = '';
+        document.getElementById("h").value = '';
+    }
+}
+
+function calc_heron() {
+    var s1 = parseFloat(document.getElementById("s1").value);
+    var s2 = parseFloat(document.getElementById("s2").value);
+    var s3 = parseFloat(document.getElementById("s3").value);
+    var half_perm = (s1 + s2 + s3)/2;
+    var exist = document.getElementById("output").innerHTML;
+    if (!s1 && !s2 && !s3) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist; 
+    } else if (!s1 || !s2 || !s3) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("s1").value = '';
+        document.getElementById("s2").value = '';
+        document.getElementById("s2").value = '';
+    } else {
+        var area = Math.sqrt(half_perm*(half_perm-s1)*(half_perm-s2)*(half_perm-s3));
+        document.getElementById("output").innerHTML = "<br/><br/><b>For a Triangle with side of " + s1 + ", " + s2 + " and " + s3 + " units<br/>Area: " + area + " sq. units" + exist;
+    }
+}
