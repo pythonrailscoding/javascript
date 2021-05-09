@@ -32,17 +32,17 @@
       </nav>
     
     <title>FiguresMathCalc!</title>
+    <br/><br/><div class="container">
+        <ul class="nav nav-tabs justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../threeDfig/cuboid.html" color="black">ThreeDFiguresCalc</a>
+            </li>
+        </ul>
+        </div>
   </head>
-  <br/><br/><div class="container">
-  <ul class="nav nav-tabs justify-content-center">
-    <li class="nav-item">
-      <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="../threeDfig/cuboid.html" color="black">ThreeDFiguresCalc</a>
-      </li>
-  </ul>
-  </div>
   <body>
       <br/>
       <br/>
@@ -63,10 +63,10 @@
             <div class="card-body">
               
               <ul class="list-group">
-                <a href="../TwoDCalc.html" class="list-group-item list-group-item-action">Rectangle</a>
-                <a href="square.html" class="list-group-item list-group-item-action">Square</a>
-                <a href="circle.html" class="list-group-item list-group-item-action">Circle</a>
-                <a href="rhombus.html" class="list-group-item list-group-item-action list-group-item-primary">Rhombus</a>
+                <a href="cuboid.html" class="list-group-item list-group-item-action" >Cuboid</a>
+                <a href="cube.html" class="list-group-item list-group-item-action">Cube</a>
+                <a href="cylinder.html" class="list-group-item list-group-item-action list-group-item-primary">Cylinder</a>
+                
                 
               </ul>
             </div>
@@ -78,17 +78,21 @@
           <div class="card h-100">
             
             
-              <h5 class="card-header">Rhombus</h5>
+              <h5 class="card-header">Cylinder</h5>
               <div class="card-body">
-              <input type="number" class="form-control" id="d1" placeholder="Enter the diagnol of the rhombus"><br/>
-              <input type="number" class="form-control" id="d2" placeholder="Enter another diagnol of the rhombus">
+              <input type="number" class="form-control" id="radius" placeholder="Enter the RADIUS of the Cylinder"><br/>
+              <input type="number" class="form-control" id="height" placeholder="Enter the HEIGHT of the Cylinder">
+              <br/>
+              <h6>Choose the value of pii</h6>
+              <input type="radio" id="defpii" value="22/7" name="one"> 22/7</input><br/>
+              <input type="radio" id="secpii" value="3.14" name="one"> 3.14</input><br/>
               <br/>
               <div class="d-grid gap-2">
-              <button class="btn btn-secondary btn-sm" onclick="calc_rm()">Calculate Dimensions</button>
+              <button class="btn btn-secondary btn-sm" onclick="calc_cylinder()">Calculate Dimensions</button>
               </div>
             </div>
             <div class="card-footer">
-              <small class="text-muted">This will calculate Area and Perimeter and length of the side of the rhombus</small>
+              <small class="text-muted">This will calculate Volume, LSA and TSA of the cylinder</small>
             </div>
           </div>
         </div>
@@ -99,7 +103,7 @@
         <br>
         </div>
         </div>
-        <br><br>
+        <br>
         <div class="container">
         <div class="card text-dark bg-light mb-3">
             <h3 class="card-header"><button class="btn btn-secondary btn-sm" onclick="Clear()">Clear Terminal</button><br/></h3>

@@ -215,3 +215,77 @@ function calc_rm() {
         document.getElementById("d2").value = "";
     }
 }
+
+function calc_cube() {
+    var side = parseFloat(document.getElementById("side").value);
+    var exist = document.getElementById("output").innerHTML;
+    var volume = Math.pow(side, 3);
+    var LSA = side*4;
+    var TSA = side*6;
+    if (!side) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+    } else {
+        document.getElementById("output").innerHTML = '<br/><br/><b>For a cube with side of ' + side +' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("side").value = '';         
+    }    
+}
+
+function calc_cuboid() {
+    var l = parseFloat(document.getElementById("l").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var h = parseFloat(document.getElementById("h").value);
+    var volume = l*b*h;
+    var LSA = 2*h*(l+b);
+    var TSA = 2*((l*h) + (l*b) + (b*h));
+    var exist = document.getElementById("output").innerHTML;
+    if (!l && !b && !h) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+    } else if (!l || !b || !h) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("l").value = '';
+        document.getElementById("b").value = '';
+        document.getElementById("h").value = '';
+    } else {
+        document.getElementById("output").innerHTML = '<br><br/><b>For a cuboid with dimensions of ' + l + ' x ' +  b + ' x ' + h  + ' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("l").value = '';
+        document.getElementById("b").value = '';
+        document.getElementById("h").value = '';
+    }
+}
+
+function calc_cylinder() {
+    var dividepi = document.getElementById("defpii").checked;
+    var normalpii = document.getElementById("secpii").checked;
+    var exist = document.getElementById("output").innerHTML;    
+    var r = parseFloat(document.getElementById("radius").value);
+    var h = parseFloat(document.getElementById("height").value);
+    if (!r && !h) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;
+    } else if (!r || !h) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("r").value = '';
+        document.getElementById("h").value = '';    
+    } else if (!dividepi && !normalpii){
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">Value of pii not choosen!</font></b>' + exist;
+        document.getElementById("r").value = '';
+        document.getElementById("h").value = '';
+    } else if (dividepi == true) {
+        var volume = (22*r*r*h)/7;
+        var LSA = (2*22*r*h)/7;
+        var TSA = (2*22*r*(h+r))/7;
+        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("radius").value = '';
+        document.getElementById("height").value = '';
+        document.getElementById("defpii").checked = false;
+        document.getElementById("secpii").checked = false;
+    } else {
+        var volume = 3.14*r*r*h;
+        var LSA = 2*3.14*r*h;
+        var TSA = 2*3.14*r*(h+r);
+        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("radius").value = '';
+        document.getElementById("height").value = '';
+        document.getElementById("defpii").checked = false;
+        document.getElementById("secpii").checked = false;
+    }
+}

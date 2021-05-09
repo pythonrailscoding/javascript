@@ -36,10 +36,10 @@
   <br/><br/><div class="container">
   <ul class="nav nav-tabs justify-content-center">
     <li class="nav-item">
-      <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
+      <a class="nav-link active" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="../threeDfig/cuboid.html" color="black">ThreeDFiguresCalc</a>
+        <a class="nav-link active bg-primary fg-dark" aria-current="page" href="cuboid.html" color="black">ThreeDFiguresCalc</a>
       </li>
   </ul>
   </div>
@@ -63,10 +63,10 @@
             <div class="card-body">
               
               <ul class="list-group">
-                <a href="../TwoDCalc.html" class="list-group-item list-group-item-action">Rectangle</a>
-                <a href="square.html" class="list-group-item list-group-item-action">Square</a>
-                <a href="circle.html" class="list-group-item list-group-item-action">Circle</a>
-                <a href="rhombus.html" class="list-group-item list-group-item-action list-group-item-primary">Rhombus</a>
+                <a href="cuboid.html" class="list-group-item list-group-item-action list-group-item-primary" >Cuboid</a>
+                <a href="cube.html" class="list-group-item list-group-item-action">Cube</a>
+                <a href="cylinder.html" class="list-group-item list-group-item-action">Cylinder</a>
+                
                 
               </ul>
             </div>
@@ -78,17 +78,18 @@
           <div class="card h-100">
             
             
-              <h5 class="card-header">Rhombus</h5>
+              <h5 class="card-header">Cuboid</h5>
               <div class="card-body">
-              <input type="number" class="form-control" id="d1" placeholder="Enter the diagnol of the rhombus"><br/>
-              <input type="number" class="form-control" id="d2" placeholder="Enter another diagnol of the rhombus">
+              <input type="number" class="form-control" id="l" placeholder="Enter the LENGTH of the Cuboid">
+              <br/><input type="number" class="form-control" id="b" placeholder="Enter the BREADTH of the Cuboid"><br/>
+              <input type="number" class="form-control" id="h" placeholder="Enter the HEIGHT of the Cuboid">
               <br/>
               <div class="d-grid gap-2">
-              <button class="btn btn-secondary btn-sm" onclick="calc_rm()">Calculate Dimensions</button>
+              <button class="btn btn-secondary btn-sm" onclick="calc_cuboid()">Calculate Dimensions</button>
               </div>
             </div>
             <div class="card-footer">
-              <small class="text-muted">This will calculate Area and Perimeter and length of the side of the rhombus</small>
+              <small class="text-muted">This will calculate LSA, TSA and volume of the Cuboid</small>
             </div>
           </div>
         </div>
