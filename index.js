@@ -273,7 +273,7 @@ function calc_cylinder() {
         var volume = (22*r*r*h)/7;
         var LSA = (2*22*r*h)/7;
         var TSA = (2*22*r*(h+r))/7;
-        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Curved Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
         document.getElementById("radius").value = '';
         document.getElementById("height").value = '';
         document.getElementById("defpii").checked = false;
@@ -282,7 +282,7 @@ function calc_cylinder() {
         var volume = 3.14*r*r*h;
         var LSA = 2*3.14*r*h;
         var TSA = 2*3.14*r*(h+r);
-        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Lateral Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
+        document.getElementById("output").innerHTML = document.getElementById("output").innerHTML = '<br><br/><b>For a cylinder with radius of ' + r + ' units and height of ' +  h + ' units<br/>Curved Surface Area: ' + LSA +' sq. units<br/>Total Surface Area: ' + TSA +' sq. units<br/>Volume: ' + volume +' unit cube</b>' + exist;
         document.getElementById("radius").value = '';
         document.getElementById("height").value = '';
         document.getElementById("defpii").checked = false;
