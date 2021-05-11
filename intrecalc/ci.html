@@ -16,20 +16,20 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="temperature.html">TemperatureCalc</a>
+                <a class="nav-link" aria-current="page" href="../temperature.html">TemperatureCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.html">NorMalCalc</a>
+                <a class="nav-link" href="../index.html">NorMalCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="table.html">MultipliTableCalc</a>
+                <a class="nav-link" href="../table.html">MultipliTableCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="TwoDCalc.html">FiguresMathCalc</a>
+                <a class="nav-link " href="../TwoDCalc.html">FiguresMathCalc</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="intrecalc/si.html" color="black">IntreCalc</a>
-              </li>
+                  <a class="nav-link active" href="si.html">IntreCalc</a>
+                  </li>
           </div>
         </div>
       </nav>
@@ -37,15 +37,15 @@
     <title>FiguresMathCalc!</title>
   </head>
   <br/><br/><div class="container">
-    <ul class="nav nav-tabs justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link active bg-primary fg-dark" aria-current="page" href="../TwoDCalc.html" color="black">TwoDFiguresCalc</a>
+  <ul class="nav nav-tabs justify-content-center">
+    <li class="nav-item">
+        <a class="nav-link active " aria-current="page" href="si.html" color="black">Simple Interest</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="threeDfig/cuboid.html" color="black">ThreeDFiguresCalc</a>
+          <a class="nav-link active bg-primary fg-dark" aria-current="page" href="ci.html" color="black">Compound Interest</a>
         </li>
-    </ul>
-    </div>
+  </ul>
+  </div>
   <body>
       <br/>
       <br/>
@@ -58,45 +58,22 @@
     
               
                
-    <div class="row row-cols-2 row-cols-md-2">
-        <div class="col">
-            <br/>
-          <div class="card " style="width: 28rem;">
+   
+          <div class="card">
             
-            <div class="card-body">
-              
-              <ul class="list-group">
-                <a href="TwoDCalc.html" class="list-group-item list-group-item-action list-group-item-primary">Rectangle</a>
-                <a href="twoDfig/square.html" class="list-group-item list-group-item-action">Square</a>
-                <a href="twoDfig/circle.html" class="list-group-item list-group-item-action">Circle</a>
-                <a href="twoDfig/rhombus.html" class="list-group-item list-group-item-action">Rhombus</a>
-                <a href="twoDfig/triangle.html" class="list-group-item list-group-item-action ">Triangle</a>
-              </ul>
-            </div>
-            
-          </div>
-        </div>
-        
-        <div class="col">
-          <div class="card h-100">
-            
-            
-              <h5 class="card-header">Rectangle</h5>
+            <h4 class="card-header">Compound Interest</h4>
+           
               <div class="card-body">
-              <input type="number" class="form-control" id="length" placeholder="Enter the LENGTH of the rectangle">
-              <br/><input type="number" class="form-control" id="breadth" placeholder="Enter the BREADTH of the rectangle">
-              <br/>
-              <div class="d-grid gap-2">
-              <button class="btn btn-secondary btn-sm" onclick="calc_rect()">Calculate Dimensions</button>
+                <input type="number" id="p" class="form-control" placeholder="Enter the PRINCIPLE">
+                <br/><input type="number" id="r" class="form-control" placeholder="Enter the RATE in %">
+                <br/><input type="number" id="t" class="form-control" placeholder="Enter the TIME in YEARS">
+                <div class="d-grid gap-2"><br/>
+                <button onclick="calc_ci()" class="btn btn-secondary btn-sm">Calculate</button>
+                </div>
               </div>
-            </div>
-            <div class="card-footer">
-              <small class="text-muted">This will calculate Area and length of a Diagnol</small>
-            </div>
-          </div>
         </div>
       </div>
-        <script type="text/javascript" src="index.js">
+        <script type="text/javascript" src="../index.js">
         
         </script>
         <br>

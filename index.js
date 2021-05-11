@@ -323,6 +323,49 @@ function calc_heron() {
         document.getElementById("s2").value = '';
     } else {
         var area = Math.sqrt(half_perm*(half_perm-s1)*(half_perm-s2)*(half_perm-s3));
-        document.getElementById("output").innerHTML = "<br/><br/><b>For a Triangle with side of " + s1 + ", " + s2 + " and " + s3 + " units<br/>Area: " + area + " sq. units" + exist;
+        document.getElementById("output").innerHTML = "<br/><br/><b>For a Triangle with side of " + s1 + ", " + s2 + " and " + s3 + " units<br/>Area: " + area + " sq. units </b>" + exist;
+    }
+}
+
+function calc_ci() {
+    var p = parseFloat(document.getElementById("p").value);
+    var r = parseFloat(document.getElementById("r").value);
+    var t = parseFloat(document.getElementById("t").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!p && !r && !t) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;    
+    } else if (!p || !r || !t) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("p").value = '';
+        document.getElementById("r").value = '';
+        document.getElementById("t").value = '';
+    } else {
+        var amount = p*(Math.pow((100 + r)/100, t));
+        var ci = amount - p;
+        document.getElementById("output").innerHTML = "<br/><br/><b>Principle = Rs. " + p + ", Time = " + t + " years, Rate = " + r + " % per annum compounded anually<br/>CI = Rs. " + ci  + "<br/>Amount = Rs. " + amount + "</b>" + exist;
+        document.getElementById("p").value = '';
+        document.getElementById("r").value = '';
+        document.getElementById("t").value = '';
+    }
+}
+function calc_si() {
+    var p = parseFloat(document.getElementById("p").value);
+    var r = parseFloat(document.getElementById("r").value);
+    var t = parseFloat(document.getElementById("t").value);
+    var exist = document.getElementById("output").innerHTML;
+    if (!p && !r && !t) {
+        document.getElementById("output").innerHTML = '<br/><b><br/><font color="red">No Values Entered</font></b>' + exist;    
+    } else if (!p || !r || !t) {
+        document.getElementById("output").innerHTML = "<br><br/><b><font color='red'>You need to fill values in all of the fields!</font></b>"  + exist;
+        document.getElementById("p").value = '';
+        document.getElementById("r").value = '';
+        document.getElementById("t").value = '';
+    } else {
+        var si = (p*r*t)/100;
+        var amount = p + si;
+        document.getElementById("output").innerHTML = "<br/><br/><b>Principle = Rs. " + p + ", Time = " + t + " years, Rate = " + r + " % per annum<br/>SI = Rs. " + si  + "<br/>Amount = Rs. " + amount + "</b>" + exist;
+        document.getElementById("p").value = '';
+        document.getElementById("r").value = '';
+        document.getElementById("t").value = '';
     }
 }
